@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<<<<<<< HEAD
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+=======
+<<<<<<< HEAD
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+=======
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+>>>>>>> 2f36051 (update)
+>>>>>>> 74b14f5 (update)
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 74b14f5 (update)
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory>tests/Feature</directory>
+<<<<<<< HEAD
+=======
+=======
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+>>>>>>> 2f36051 (update)
+>>>>>>> 74b14f5 (update)
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+<<<<<<< HEAD
+            <directory>app</directory>
+=======
+<<<<<<< HEAD
+            <directory>app</directory>
+=======
+            <directory suffix=".php">./app</directory>
+>>>>>>> 2f36051 (update)
+>>>>>>> 74b14f5 (update)
+        </include>
+    </source>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <!-- <env name="DB_CONNECTION" value="sqlite"/> -->
+        <!-- <env name="DB_DATABASE" value=":memory:"/> -->
+        <env name="MAIL_MAILER" value="array"/>
+<<<<<<< HEAD
+        <env name="PULSE_ENABLED" value="false"/>
+=======
+<<<<<<< HEAD
+        <env name="PULSE_ENABLED" value="false"/>
+=======
+>>>>>>> 2f36051 (update)
+>>>>>>> 74b14f5 (update)
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="TELESCOPE_ENABLED" value="false"/>
+    </php>
+</phpunit>
