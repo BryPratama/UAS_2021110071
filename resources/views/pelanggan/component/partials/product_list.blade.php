@@ -1,5 +1,5 @@
 @if ($data->isEmpty())
-    <h1>Product Kosong</h1>
+    <h1>Barang Kosong</h1>
 @else
     @foreach ($data as $p)
         <div class="card" style="width:200px;">

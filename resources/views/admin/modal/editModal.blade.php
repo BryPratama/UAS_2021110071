@@ -18,18 +18,17 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="nameProduct" class="col-sm-5 col-form-label">Nama Product</label>
+                        <label for="nameProduct" class="col-sm-5 col-form-label">Nama Barang</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" id="nameProduct" name="nama"
                                 value="{{ $data->nama_product }}">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="type" class="col-sm-5 col-form-label">Type Product</label>
+                        <label for="type" class="col-sm-5 col-form-label">Tipe Barang</label>
                         <div class="col-sm-7">
                             <select type="text" class="form-control" id="type" name="type">
-                                <option value=""> Pilih Type </option>
+                                <option value=""> Pilih Tipe </option>
                                 <option value="reguler" {{ $data->type === 'reguler' ? 'selected' : '' }}>Reguler</option>
                                 <option value="premium" {{ $data->type === 'premium' ? 'selected' : '' }}>Premium</option>
                                 <option value="rlc" {{ $data->type === 'rlc' ? 'selected' : '' }}>RLC
@@ -37,37 +36,35 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="kategori" class="col-sm-5 col-form-label">Category Product</label>
+                        <label for="kategori" class="col-sm-5 col-form-label">Kategori Product</label>
                         <div class="col-sm-7">
                             <select type="text" class="form-control" id="kategori" name="kategori">
-                                <option value=""> Pilih Category </option>
-                                <option value="JDM" {{ $data->kategory === 'JDM' ? 'selected' : '' }}>JDM</option>
-                                <option value="EUDM" {{ $data->kategory === 'EUDM' ? 'selected' : '' }}>EU-DM</option>
-                                <option value="ADM" {{ $data->kategory === 'ADM' ? 'selected' : '' }}>ADM</option>
+                                <option value=""> Pilih Kategori </option>
+                                <option value="Jdm" {{ $data->kategory === 'Jdm' ? 'selected' : '' }}>JDM</option>
+                                <option value="Eudm" {{ $data->kategory === 'Eudm' ? 'selected' : '' }}>EU-DM
+                                </option>
+                                <option value="Adm" {{ $data->kategory === 'Adm' ? 'selected' : '' }}>
+                                    ADM</option>
                             </select>
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="harga" class="col-sm-5 col-form-label">Harga Product</label>
+                        <label for="harga" class="col-sm-5 col-form-label">Harga Barang</label>
                         <div class="col-sm-7">
                             <input type="number" class="form-control" id="harga" name="harga"
                                 value="{{ $data->harga }}">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="quantity" class="col-sm-5 col-form-label">Qty Product</label>
+                        <label for="quantity" class="col-sm-5 col-form-label">Qty Barang</label>
                         <div class="col-sm-7">
                             <input type="number" class="form-control" id="quantity" name="quantity"
                                 value="{{ $data->quantity }}">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="foto" class="col-sm-5 col-form-label">Foto Product</label>
+                        <label for="foto" class="col-sm-5 col-form-label">Foto Barang</label>
                         <div class="col-sm-7">
                             <input type="hidden" name="foto" value="{{$data->foto}}">
                             <img src="{{ asset('storage/product/' . $data->foto) }}" class="mb-2 preview"

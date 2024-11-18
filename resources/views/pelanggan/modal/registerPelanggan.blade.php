@@ -9,47 +9,47 @@
                 <form action="{{ route('storePelanggan') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
-                        <label for="nama" class="col-sm-3 col-form-label">Name <span
-                                style="color:rgb(255, 225, 0);">*</span></label>
+                        <label for="nama" class="col-sm-3 col-form-label">Nama<span
+                                style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" name="name" id="nama" value=""
                                 placeholder="Your name" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="email" class="col-sm-3 col-form-label">Email <span
-                            style="color:rgb(255, 225, 0);">*</span></label>
+                        <label for="email" class="col-sm-3 col-form-label">Email<span
+                                style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="email" class="form-control" name="email" id="email" value=""
                                 placeholder="Your email" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="password" class="col-sm-3 col-form-label">Password <span
-                            style="color:rgb(255, 225, 0);">*</span></label>
+                        <label for="password" class="col-sm-3 col-form-label">Password<span
+                                style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" name="password" id="password"
                                 placeholder="Your Password" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-3 col-form-label">Address 1 <span
-                            style="color:rgb(255, 225, 0);">*</span></label>
+                        <label for="alamat" class="col-sm-3 col-form-label">Address 1<span
+                                style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="alamat" name="alamat"
                                 placeholder="Input Address 1" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-3 col-form-label">Address 2 </label>
+                        <label for="alamat" class="col-sm-3 col-form-label">Address 2</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" name="alamat2" id="alamat"
                                 placeholder="Input Address 2">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="tlp" class="col-sm-3 col-form-label">Phone Number <span
-                            style="color:rgb(255, 225, 0);">*</span>
+                        <label for="tlp" class="col-sm-3 col-form-label">No Telepon<span
+                                style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="tlp" name="tlp"
@@ -57,8 +57,8 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="date" class="col-sm-3 col-form-label">Date of birth <span
-                            style="color:rgb(255, 225, 0);">*</span>
+                        <label for="date" class="col-sm-3 col-form-label">Tanggal Lahir<span
+                                style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="date" class="form-control" id="date" name="date"
@@ -79,8 +79,10 @@
                     <button type="submit" class="btn btn-success col-sm-12">Register</button>
                     </p>
                     <button type="button" class="btn btn-danger col-sm-12"data-bs-dismiss="modal">Close</button>
+
                 </form>
             </div>
+
         </div>
     </div>
 </div>

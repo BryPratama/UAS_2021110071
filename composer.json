@@ -1,23 +1,6 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
-    "require": {
-        "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^10.10",
-        "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8",
-        "realrashid/sweet-alert": "^7.2"
-<<<<<<< HEAD
-=======
-=======
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
@@ -30,8 +13,6 @@
         "laravel/tinker": "^2.8",
         "midtrans/midtrans-php": "^2.5",
         "realrashid/sweet-alert": "^7.0"
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

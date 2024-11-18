@@ -21,10 +21,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
         'foto',
         'alamat',
         'tlp',
@@ -32,8 +28,6 @@ class User extends Authenticatable
         'is_active',
         'is_admin',
         'is_mamber',
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     ];
 
     /**

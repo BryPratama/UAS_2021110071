@@ -16,9 +16,8 @@
                                 value="{{ $nik }}" readonly>
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="name" class="col-sm-5 col-form-label">Nama</label>
+                        <label for="name" class="col-sm-5 col-form-label">Nama Pegawai</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control @error('name') is-invalid @enderror"
                                 id="name" name="nama" autocomplete="off">
@@ -27,43 +26,37 @@
                             @enderror
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="email" class="col-sm-5 col-form-label">Email</label>
+                        <label for="email" class="col-sm-5 col-form-label">Email Pegawai</label>
                         <div class="col-sm-7">
                             <input type="email" class="form-control" id="email" name="email" autocomplete="off">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="password" class="col-sm-5 col-form-label">Password</label>
+                        <label for="password" class="col-sm-5 col-form-label">Password Pegawai</label>
                         <div class="col-sm-7">
                             <input type="password" class="form-control" id="password" name="password"
                                 autocomplete="off">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-5 col-form-label">Alamat</label>
+                        <label for="alamat" class="col-sm-5 col-form-label">Alamat Pegawai</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" id="alamat" name="alamat">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
-                        <label for="tlp" class="col-sm-5 col-form-label">Telepon</label>
+                        <label for="tlp" class="col-sm-5 col-form-label">Telphone Pegawai</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" id="tlp" name="tlp">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
                         <label for="tglLahir" class="col-sm-5 col-form-label">Tanggal lahir</label>
                         <div class="col-sm-7">
                             <input type="date" class="form-control" id="tglLahir" name="tglLahir">
                         </div>
                     </div>
-
                     <div class="mb-3 row">
                         <label for="role" class="col-sm-5 col-form-label">Role</label>
                         <div class="col-sm-7">
@@ -76,7 +69,7 @@
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="foto" class="col-sm-5 col-form-label">Profile Picture</label>
+                        <label for="foto" class="col-sm-5 col-form-label">Foto Profil</label>
                         <div class="col-sm-7">
                             <input type="hidden" name="foto">
                             <img class="mb-2 preview" style="width: 100px;">

@@ -29,17 +29,7 @@ return [
     */
 
     'bcrypt' => [
-<<<<<<< HEAD
-        'rounds' => env('BCRYPT_ROUNDS', 12),
-        'verify' => true,
-=======
-<<<<<<< HEAD
-        'rounds' => env('BCRYPT_ROUNDS', 12),
-        'verify' => true,
-=======
         'rounds' => env('BCRYPT_ROUNDS', 10),
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     ],
 
     /*
@@ -57,14 +47,6 @@ return [
         'memory' => 65536,
         'threads' => 1,
         'time' => 4,
-<<<<<<< HEAD
-        'verify' => true,
-=======
-<<<<<<< HEAD
-        'verify' => true,
-=======
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     ],
 
 ];

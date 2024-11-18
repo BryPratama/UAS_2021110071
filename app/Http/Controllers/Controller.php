@@ -2,16 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
-=======
-<<<<<<< HEAD
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
-=======
 use App\Models\modelDetailTransaksi;
 use App\Models\product;
 use App\Models\tblCart;
@@ -24,30 +14,11 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use RealRashid\SweetAlert\Facades\Alert;
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-    public function index()
-    {
-        return view('pelanggan.page.home',[
-            'title'=>'Home',
-        ]);
-    }
-    public function shop()
-    {
-        return view('pelanggan.page.shop',[
-            'title'=>'Shop',
-<<<<<<< HEAD
-=======
-=======
 
     public function shop(Request $request)
     {
@@ -66,20 +37,10 @@ class Controller extends BaseController
             'title'     => 'Shop',
             'data'      => $data,
             'count'     => $countKeranjang,
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
         ]);
     }
     public function transaksi()
     {
-<<<<<<< HEAD
-        return view('pelanggan.page.transaksi',[
-            'title'=>'Transaksi',
-=======
-<<<<<<< HEAD
-        return view('pelanggan.page.transaksi',[
-            'title'=>'Transaksi',
-=======
         $db = tblCart::with('product')->where(['idUser' => 'guest123', 'status' => 0])->get();
         $countKeranjang = tblCart::where(['idUser' => 'guest123', 'status' => 0])->count();
 
@@ -88,49 +49,19 @@ class Controller extends BaseController
             'title'     => 'Transaksi',
             'count'     => $countKeranjang,
             'data'      => $db
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
         ]);
     }
     public function contact()
     {
-<<<<<<< HEAD
-        return view('pelanggan.page.contact',[
-            'title'=>'Contact Us',
-=======
-<<<<<<< HEAD
-        return view('pelanggan.page.contact',[
-            'title'=>'Contact Us',
-=======
         $countKeranjang = tblCart::where(['idUser' => 'guest123', 'status' => 0])->count();
 
         return view('pelanggan.page.contact', [
             'title'     => 'Contact Us',
             'count'     => $countKeranjang,
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
         ]);
     }
     public function checkout()
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-        return view('pelanggan.page.checkout',[
-            'title'=>'Checkout',
-        ]);
-    }
-
-
-    public function admin()
-    {
-        return view('admin.page.dashboard',[
-            'name' => "Dashboard",
-            'title'=> 'Admin Dashboard',
-<<<<<<< HEAD
-=======
-=======
         $countKeranjang = tblCart::where(['idUser' => 'guest123', 'status' => 0])->count();
         $code = transaksi::count();
         $codeTransaksi = date('Ymd') . $code + 1;
@@ -152,12 +83,9 @@ class Controller extends BaseController
     public function prosesCheckout(Request $request, $id)
     {
         $data = $request->all();
-        // $findId = tblCart::where('id',$id)->get();
         $code = transaksi::count();
         $codeTransaksi = date('Ymd') . $code + 1;
-        // dd($data);die;
 
-        // simpan detail barang
         $detailTransaksi = new modelDetailTransaksi();
         $fieldDetail = [
             'id_transaksi' => $codeTransaksi,
@@ -167,7 +95,6 @@ class Controller extends BaseController
         ];
         $detailTransaksi::create($fieldDetail);
 
-        // update cart
         $fieldCart = [
             'qty'          => $data['qty'],
             'price'        => $data['total'],
@@ -183,8 +110,6 @@ class Controller extends BaseController
     {
         $data = $request->all();
         $dbTransaksi = new transaksi();
-        // dd($data);die;
-
         $dbTransaksi->code_transaksi    = $data['code'];
         $dbTransaksi->total_qty         = $data['totalQty'];
         $dbTransaksi->total_harga       = $data['dibayarkan'];
@@ -236,44 +161,18 @@ class Controller extends BaseController
             'sumStock'      => $dataStock,
             'dataTransaksi' => $dataTransaksi,
             'dataPenghasilan' => $dataPenghasilan,
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
         ]);
     }
 
     public function userManagement()
     {
-<<<<<<< HEAD
-        return view('admin.page.user',[
-            'name' => "User Management",
-            'title'=> 'Admin User Management',
-=======
-<<<<<<< HEAD
-        return view('admin.page.user',[
-            'name' => "User Management",
-            'title'=> 'Admin User Management',
-=======
         return view('admin.page.user', [
             'name'      => "User Management",
             'title'     => 'Admin User Management',
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
         ]);
     }
     public function report()
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-        return view('admin.page.report',[
-            'name' => "Report",
-            'title'=> 'Admin Report',
-        ]);
-    }
-<<<<<<< HEAD
-=======
-=======
         return view('admin.page.report', [
             'name'      => "Report",
             'title'     => 'Admin Report',
@@ -320,16 +219,4 @@ class Controller extends BaseController
         Alert::toast('Kamu berhasil Logout', 'success');
         return redirect('admin');
     }
-
-    public function deleteItem($id)
-{
-    // Hapus item dari tblCart berdasarkan ID yang diberikan
-    tblCart::where('id', $id)->delete();
-
-    // Redirect kembali ke halaman transaksi dengan pesan sukses
-    return redirect()->route('transaksi')->with('success', 'Item berhasil dihapus');
-}
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 }

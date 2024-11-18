@@ -29,15 +29,7 @@ return [
     | mailers below. You are free to add additional mailers as required.
     |
     | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
-<<<<<<< HEAD
-    |            "postmark", "log", "array", "failover", "roundrobin"
-=======
-<<<<<<< HEAD
-    |            "postmark", "log", "array", "failover", "roundrobin"
-=======
     |            "postmark", "log", "array", "failover"
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     |
     */
 
@@ -58,37 +50,15 @@ return [
             'transport' => 'ses',
         ],
 
-<<<<<<< HEAD
-        'postmark' => [
-            'transport' => 'postmark',
-            // 'message_stream_id' => null,
-=======
-<<<<<<< HEAD
-        'postmark' => [
-            'transport' => 'postmark',
-            // 'message_stream_id' => null,
-=======
         'mailgun' => [
             'transport' => 'mailgun',
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             // 'client' => [
             //     'timeout' => 5,
             // ],
         ],
 
-<<<<<<< HEAD
-        'mailgun' => [
-            'transport' => 'mailgun',
-=======
-<<<<<<< HEAD
-        'mailgun' => [
-            'transport' => 'mailgun',
-=======
         'postmark' => [
             'transport' => 'postmark',
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             // 'client' => [
             //     'timeout' => 5,
             // ],
@@ -115,23 +85,6 @@ return [
                 'log',
             ],
         ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-
-        'roundrobin' => [
-            'transport' => 'roundrobin',
-            'mailers' => [
-                'ses',
-                'postmark',
-            ],
-        ],
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     ],
 
     /*

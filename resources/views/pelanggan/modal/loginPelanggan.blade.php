@@ -27,7 +27,7 @@
                     <button type="submit" class="btn btn-success col-sm-12 mb-2">Login</button>
                     <button type="button" class="btn btn-primary col-sm-12" data-bs-toggle="modal"
                         data-bs-target="#registerModal">Register</button>
-                    <p class="m-auto text-center p-2" style="font-size:12px">Register Sekarang!
+                    <p class="m-auto text-center p-2" style="font-size:12px">Belum ada akun? Register Sekarang
                     </p>
                 </form>
             </div>

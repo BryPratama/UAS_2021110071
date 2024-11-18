@@ -24,24 +24,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     @stack('style')
     <title>Bry HotWheels Shop | {{ $title }}</title>
-
 </head>
 
 <body>
+
     <main class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="card p-4 m-auto" style="width: 30vw;">
             <div class="card-header bg-transparent text-center">
                 <h5>{{ $name }}</h5>
             </div>
-
             <form action="{{ route('loginProses') }}" method="POST">
                 @csrf
                 @if (session('error'))
                     <div class="alert alert-danger">
-                        <b>Error Bukan Admin!</b> {{ session('error') }}
+                        <b>Error!</b> {{ session('error') }}
                     </div>
                 @endif
-
                 <div class="card-body">
                     <div class="mb-3 row">
                         <label for="email" class="col-sm-5 col-form-label">Email</label>
@@ -50,7 +48,6 @@
                                 value="" autocomplete="off" autofocus>
                         </div>
                     </div>
-
                     <div class="mb-3 row">
                         <label for="password" class="col-sm-5 col-form-label">Password</label>
                         <div class="col-sm-7">
@@ -58,10 +55,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card-footer bg-transparent">
-                    <button type="submit" class="btn btn-success w-100 mt-2">Login Now</button>
-                    <button type="submit" class="btn btn-danger w-100 mt-2">Forgot Password</button>
+                    <button type="submit" class="btn btn-success w-100 mt-2">Login</button>
+                    <button type="submit" class="btn btn-danger w-100 mt-2">Lupa Password</button>
                 </div>
             </form>
         </div>

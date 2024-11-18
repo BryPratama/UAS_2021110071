@@ -14,26 +14,14 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/custome.css') }}">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Bry HotWheels Shop | {{ $title }}</title>
-<<<<<<< HEAD
-=======
-=======
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
         data-client-key="{{ config('midtrans.client_id') }}"></script>
-    <title>Bry HotWheels Shop {{ isset($title) ? $title : '' }}</title> <!-- Pengecekan variabel $title -->
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
+    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+    <title>Bry HotWheels Shop | {{ $title }}</title>
 </head>
 
 <body>
@@ -53,24 +41,10 @@
         </footer>
     </main>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-    @include('pelanggan.modal.loginpelanggan')
-    @include('pelanggan.modal.registerpelanggan')
-
-</body>
-<<<<<<< HEAD
-=======
-=======
     @include('pelanggan.modal.loginPelanggan')
     @include('pelanggan.modal.registerPelanggan')
     @include('sweetalert::alert')
 </body>
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
 </script>
@@ -78,11 +52,5 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
 </script>
 <script src="{{ asset('js/custom.js') }}"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 </html>

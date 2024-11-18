@@ -1,14 +1,6 @@
 <aside
     class="sidebar navbar navbar-expand-lg bg-dark d-flex flex-column gap-4 align-content-lg-center mx-2 my-2 rounded">
     <h5 class="navbar-brand">Bry HotWheels Shop</h5>
-<<<<<<< HEAD
-    {{-- <hr class="" style="color: white;font-weight:800"> --}}
-=======
-<<<<<<< HEAD
-    {{-- <hr class="" style="color: white;font-weight:800"> --}}
-=======
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
         <ul class="navbar-nav flex-column gap-3 px-2">
             <li class="navbar-item rounded {{ Request::path() === 'admin/dashboard' ? 'bg-info' : '' }} ">
@@ -19,13 +11,6 @@
                     </div>
                 </a>
             </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             <li class="navbar-item rounded {{ Request::path() === 'admin/product' ? 'bg-info' : '' }} ">
                 <a href="product" class="">
                     <div class="d-flex gap-3">
@@ -34,11 +19,6 @@
                     </div>
                 </a>
             </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
             <li class="navbar-item rounded {{ Request::path() === 'admin/transaksi' ? 'bg-info' : '' }} ">
                 <a href="transaksi" class="">
                     <div class="d-flex gap-3">
@@ -47,24 +27,14 @@
                     </div>
                 </a>
             </li>
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             <li class="navbar-item rounded {{ Request::path() === 'admin/report' ? 'bg-info' : '' }} ">
                 <a href="report" class="">
                     <div class="d-flex gap-3">
                         <span class="material-icons">analytics</span>
-                        <p class="m-0 p-0">Report</p>
+                        <p class="m-0 p-0">Laporan</p>
                     </div>
                 </a>
             </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             <li class="navbar-item rounded {{ Request::path() === 'admin/user_management' ? 'bg-info' : '' }} ">
                 <a href="user_management" class="">
                     <div class="d-flex gap-3">
@@ -73,13 +43,6 @@
                     </div>
                 </a>
             </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
             <li class="navbar-item">
                 <a href="logout" class="">
                     <div class="d-flex gap-3">

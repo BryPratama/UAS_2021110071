@@ -4,7 +4,7 @@
     <div class="container mt-5">
         <div class="card w-50">
             <div class="card-header">
-                <h4>Total dibayar</h4>
+                <h4>Total Dibayar</h4>
             </div>
             <div class="card-body">
                 <h6>Id Transaksi {{ $data->code_transaksi }}</h6>
@@ -13,7 +13,7 @@
             </div>
 
             <div class="p-2">
-                <button class="btn btn-success" id="pay-button">Bayar Sekarang</button>
+                <button class="btn btn-success" id="pay-button">Bayar Disini</button>
             </div>
         </div>
     </div>

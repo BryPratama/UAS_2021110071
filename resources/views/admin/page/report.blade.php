@@ -1,16 +1,10 @@
 @extends('admin.layout.index')
 
 @section('content')
-<<<<<<< HEAD
-    <h1>Report</h1>
-=======
-<<<<<<< HEAD
-    <h1>Report</h1>
-=======
     <div class="d-flex flex-row justify-content-start gap-2 align-items-center">
         <div class="card">
             <div class="card-header">
-                <h4 style="font-size: 16px;">Export Data Transaksi</h4>
+                <h4 style="font-size: 16px;">Export data transaksi</h4>
             </div>
             <div class="card-body">
                 <div class="d-flex flex-row gap-3">
@@ -26,10 +20,9 @@
                 <button class="btn btn-success mt-4"> Export</button>
             </div>
         </div>
-
         <div class="card">
             <div class="card-header">
-                <h4 style="font-size: 16px;">Export Data Product</h4>
+                <h4 style="font-size: 16px;">Export data Barang</h4>
             </div>
             <div class="card-body">
                 <div class="d-flex flex-row gap-3">
@@ -46,6 +39,4 @@
             </div>
         </div>
     </div>
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 @endsection

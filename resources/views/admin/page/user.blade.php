@@ -1,25 +1,15 @@
 @extends('admin.layout.index')
-<<<<<<< HEAD
 
-@section('content')
-    <h1>User</h1>
-=======
-<<<<<<< HEAD
-
-@section('content')
-    <h1>User</h1>
-=======
 @section('content')
     <div class="card rounded-full">
         <div class="card-header bg-transparent d-flex justify-content-between">
             <button class="btn btn-info" id="addData">
                 <i class="fa fa-plus">
-                    <span>Tambah Pengguna</span>
+                    <span>Tambah User</span>
                 </i>
             </button>
             <input type="text" wire:model="search" class="form-control w-25" placeholder="Search....">
         </div>
-
         <div class="card-body">
             <table class="table table-responsive table-striped">
                 <thead>
@@ -28,13 +18,12 @@
                         <th>Foto</th>
                         <th>NIK</th>
                         <th>Join Date</th>
-                        <th>Nama</th>
+                        <th>Nama Pegawai</th>
                         <th>Role</th>
                         <th>Status</th>
                         <th>#</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     @foreach ($data as $y => $x)
                         <tr class="align-middle">
@@ -63,10 +52,8 @@
                             </td>
                         </tr>
                     @endforeach
-
                 </tbody>
             </table>
-
             <div class="pagination d-flex flex-row justify-content-between">
                 <div class="showData">
                     Data ditampilkan {{ $data->count() }} dari {{ $data->total() }}
@@ -77,7 +64,6 @@
             </div>
         </div>
     </div>
-
     <div class="tampilData" style="display: none;"></div>
     <div class="tampilEditData" style="display: none;"></div>
 
@@ -91,10 +77,10 @@
                 }
             });
         });
-
         $('.editModal').click(function(e) {
             e.preventDefault();
             var id = $(this).data('id');
+
             $.ajax({
                 type: "GET",
                 url: "{{ route('showDataUser', ['id' => ':id']) }}".replace(':id', id),
@@ -110,6 +96,7 @@
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
             },
         });
+
         $('.deleteData').click(function(e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -130,13 +117,13 @@
             });
 
             Swal.fire({
-                title: 'Hapus Data?',
-                text: "Yakin menghapus admin ini?",
+                title: 'Hapus data ?',
+                text: "Kamu yakin untuk menghapus Pegawai?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Berhasil Dihapus!'
+                confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
@@ -151,11 +138,10 @@
                                 });
                             }
                         },
-
                         error: function(xhr, status, error) {
                             Swal.fire({
                                 title: 'Error',
-                                text: 'Error',
+                                text: 'Terjadi kesalahan',
                                 icon: 'error'
                             });
                         }
@@ -164,6 +150,4 @@
             })
         });
     </script>
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 @endsection

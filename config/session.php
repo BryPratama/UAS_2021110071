@@ -198,26 +198,4 @@ return [
 
     'same_site' => 'lax',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74b14f5 (update)
-    /*
-    |--------------------------------------------------------------------------
-    | Partitioned Cookies
-    |--------------------------------------------------------------------------
-    |
-    | Setting this value to true will tie the cookie to the top-level site for
-    | a cross-site context. Partitioned cookies are accepted by the browser
-    | when flagged "secure" and the Same-Site attribute is set to "none".
-    |
-    */
-
-    'partitioned' => false,
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
 ];
