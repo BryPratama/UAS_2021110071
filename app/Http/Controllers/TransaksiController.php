@@ -81,6 +81,13 @@ class TransaksiController extends Controller
         //
     }
 
+    public function delete()
+{
+    $cart = session()->get('cart', []);
+    return view('transaksi', compact('cart'));
+}
+
+
     /**
      * Remove the specified resource from storage.
      */

@@ -122,9 +122,10 @@
                         <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                             <p class="m-0" style="font-size: 14px; font-weight:600;"><span>IDR
                                 </span>{{ number_format($p->harga) }}</p>
-                            <button class="btn btn-outline-primary" style="font-size:24px">
-                                <i class="fa-solid fa-cart-plus"></i>
-                            </button>
+                                <button class="btn btn-outline-primary add-to-cart" style="font-size:24px" data-product-id="{{ $p->id }}">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+
                         </div>
                     </div>
                 @endforeach
@@ -161,5 +162,34 @@
                 });
             });
         });
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let productId = this.dataset.productId; // Ambil ID produk dari tombol
+
+        fetch('/cart/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({ product_id: productId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(`Terjadi kesalahan: ${data.error}`);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan. Silakan coba lagi.');
+        });
+    });
+});
     </script>
 @endsection

@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Product;
+
+class CartController extends Controller
+{
+
+    public function deleteFromCart($id)
+{
+    $cart = session()->get('cart', []);
+
+    if (isset($cart[$id])) {
+        unset($cart[$id]);
+        session()->put('cart', $cart);
+    }
+
+    return redirect()->back()->with('success', 'Produk berhasil dihapus dari keranjang.');
+}
+
+public function addToCart(Request $request)
+{
+    $productId = $request->input('product_id');
+    $product = Product::find($productId);
+
+    if (!$product) {
+        return response()->json(['error' => 'Produk tidak ditemukan'], 404);
+    }
+
+    $cart = session()->get('cart', []);
+
+    // Tambahkan produk ke keranjang
+    if (isset($cart[$productId])) {
+        $cart[$productId]['quantity']++;
+    } else {
+        $cart[$productId] = [
+            'name' => $product->nama_product,
+            'price' => $product->harga,
+            'quantity' => 1,
+            'image' => $product->foto,
+        ];
+    }
+
+    session()->put('cart', $cart);
+
+    return response()->json(['message' => 'Produk berhasil ditambahkan ke keranjang', 'cart' => $cart]);
+}
+}

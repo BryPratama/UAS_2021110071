@@ -67,7 +67,6 @@ section {
     min-height: 80vh;
 }
 
-/* style footer */
 footer {
     position: static;
     bottom: 0;
@@ -75,7 +74,6 @@ footer {
     color: white;
 }
 
-/* sidebar */
 .sidebar {
     position: fixed;
     width: 250px;

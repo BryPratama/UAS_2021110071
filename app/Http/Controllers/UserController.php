@@ -43,7 +43,6 @@ class UserController extends Controller
         $data->is_mamber    = 0;
         $data->is_admin     = 1;
 
-        // dd($request);die;
         if ($request->hasFile('foto')) {
             $photo = $request->file('foto');
             $filename = date('Ymd') . '_' . $photo->getClientOriginalName();
@@ -57,13 +56,11 @@ class UserController extends Controller
     public function show($id)
     {
         $data = User::findOrFail($id);
-        // $hasValue = Hash::make($data->password);
         return view(
             'admin.modal.editUser',
             [
                 'title' => 'Edit data User',
                 'data'  => $data,
-                // 'pass'  => (string) $hasValue,
             ]
         )->render();
     }
@@ -123,7 +120,6 @@ class UserController extends Controller
         $data->is_mamber    = 1;
         $data->is_admin     = 0;
 
-        // dd($request);die;
 
         if ($request->hasFile('foto') == "") {
             $filename = "default.png";

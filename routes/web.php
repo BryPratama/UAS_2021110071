@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\TransaksiAdminController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
@@ -54,6 +55,11 @@ Route::post('/cart/add', [ProductController::class, 'addToCart'])->name('cart.ad
 Route::get('/shop/filter', [ShopController::class, 'filterByCategory'])->name('shop.filter');
 
 Route::get('/transaksi/delete/{id}', [Controller::class, 'deleteItem'])->name('deleteItem');
+
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+
 
 
 });

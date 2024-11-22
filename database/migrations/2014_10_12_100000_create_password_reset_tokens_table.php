@@ -6,18 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-<<<<<<< HEAD
     /**
      * Run the migrations.
      */
-=======
-<<<<<<< HEAD
-    /**
-     * Run the migrations.
-     */
-=======
->>>>>>> 2f36051 (update)
->>>>>>> 74b14f5 (update)
     public function up(): void
     {
         Schema::create('password_reset_tokens', function (Blueprint $table) {

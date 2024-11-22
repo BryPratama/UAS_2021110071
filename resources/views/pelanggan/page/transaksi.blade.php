@@ -8,7 +8,10 @@
             margin: 0;
         }
     </style>
+
     <h3 class="mt-5 mb-5">Keranjang Belanja</h3>
+
+    {{-- Bagian Keranjang Belanja Berdasarkan Variabel $data --}}
     @if (!$data)
     @else
         @foreach ($data as $x)
@@ -28,7 +31,7 @@
                                     <button class="rounded-start bg-secondary p-2 border border-0 plus"
                                         id="plus">+</button>
                                     <input type="number" name="qty" class="form-control w-25 text-center qty"
-                                        id="qty" name="qty" value="{{ $x->qty }}">
+                                        id="qty" value="{{ $x->qty }}">
                                     <button class="rounded-end bg-secondary p-2 border border-0 minus" id="minus"
                                         disabled>-</button>
                                 </div>
@@ -55,5 +58,21 @@
         @endforeach
     @endif
 
+    {{-- Bagian Keranjang Belanja Berdasarkan Session --}}
+    <h1 class="mt-5">Keranjang Belanja Berdasarkan Session</h1>
 
+    @if (session('cart') && count(session('cart')) > 0)
+        <div>
+            @foreach (session('cart') as $id => $item)
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <img src="{{ asset('storage/product/' . $item['image']) }}" alt="" style="width: 100px;">
+                    <p>{{ $item['name'] }}</p>
+                    <p>Rp{{ number_format($item['price']) }}</p>
+                    <p>{{ $item['quantity'] }}</p>
+                </div>
+            @endforeach
+        </div>
+    @else
+        <p>Keranjang Anda kosong</p>
+    @endif
 @endsection

@@ -54,51 +54,6 @@
         <canvas id="myChart" style="height: 50vh;"></canvas>
     </div>
 
-    <div class="d-flex flex-row gap-2">
-        <div class="card rounded-full mt-2" style="width: 50%;">
-            <div class="card-header">
-                Stock terbatas
-            </div>
-            <div class="card-body">
-                <table class="table table-responsive table-striped" style="font-size: 12px">
-                    <thead>
-                        <tr>
-                            <th>Barang</th>
-                            <th>Inbound Date</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-                <div class="pagination d-flex flex-row justify-content-between">
-                </div>
-            </div>
-        </div>
-        <div class="card rounded-full mt-2" style="width: 50%;">
-            <div class="card-header">
-                Hot Item
-            </div>
-            <div class="card-body">
-                <table class="table table-responsive table-striped" style="font-size: 12px">
-                    <thead>
-                        <tr>
-                            <th>Barang</th>
-                            <th>Inbound Date</th>
-                            <th>Stock</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-                <div class="pagination d-flex flex-row justify-content-between">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         const ctx = document.getElementById('myChart');
 
