@@ -10,8 +10,6 @@
     </style>
 
     <h3 class="mt-5 mb-5">Keranjang Belanja</h3>
-
-    {{-- Bagian Keranjang Belanja Berdasarkan Variabel $data --}}
     @if (!$data)
     @else
         @foreach ($data as $x)
@@ -57,10 +55,6 @@
             </div>
         @endforeach
     @endif
-
-    {{-- Bagian Keranjang Belanja Berdasarkan Session --}}
-    <h1 class="mt-5">Keranjang Belanja Berdasarkan Session</h1>
-
     @if (session('cart') && count(session('cart')) > 0)
         <div>
             @foreach (session('cart') as $id => $item)

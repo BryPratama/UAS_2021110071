@@ -57,9 +57,4 @@ Route::get('/shop/filter', [ShopController::class, 'filterByCategory'])->name('s
 Route::get('/transaksi/delete/{id}', [Controller::class, 'deleteItem'])->name('deleteItem');
 
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
-
-Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
-
-
-
 });

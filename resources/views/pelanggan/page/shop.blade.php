@@ -167,7 +167,7 @@
     button.addEventListener('click', function (e) {
         e.preventDefault();
 
-        let productId = this.dataset.productId; // Ambil ID produk dari tombol
+        let productId = this.dataset.productId;
 
         fetch('/cart/add', {
             method: 'POST',
